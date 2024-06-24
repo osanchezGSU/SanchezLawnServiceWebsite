@@ -155,7 +155,8 @@
 
   <section class = "services" id="quote">
     <h1 class="title">Get Free Quote</h1>
-    <div class="form">
+    <form class = "form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="5f618a85-a770-4cd7-aa1f-df86076cefc5">
       <div>
         <div class="form-floating mb-3">
           <input type="name" class="form-control" id="floatingInput" placeholder="Name">
@@ -178,7 +179,79 @@
           <label for="floatingInput">Address</label>
         </div>
       </div>
+      <div>
+        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+          <option selected>How did you hear about us?</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class = "select-all">Select All Requested Services:</div>
+      <div class="scroll-box">
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="lawn_mowing"> Lawn Maintenance
+            </label>
+        </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="shrub_trimming"> Mulch Installation
+            </label>
+        </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="flower_bed_maintenance"> Rock Installation
+            </label>
+        </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="gutter_cleaning"> Pine Straw Installation
+            </label>
+        </div>
+        <div class="checkbox-item">
+          <label>
+              <input type="checkbox" name="services[]" value="leaf_cleanups"> Sod Installation
+          </label>
+      </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="leaf_cleanups"> Leaf Clean Ups
+            </label>
+        </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="pruning"> Pruning
+            </label>
+        </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="small_tree_removal"> Small Tree Removal
+            </label>
+        </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="pressure_washing"> Pressure Washing
+            </label>
+        </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="dumpster_removal"> Dumpster Removal
+            </label>
+        </div>
+        <div class="checkbox-item">
+            <label>
+                <input type="checkbox" name="services[]" value="grading"> Grading
+            </label>
+        </div>
     </div>
+
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+  
+      <button type="submit">SUBMIT</button>
+    
+  </form>
   </section>
  
 <script>
