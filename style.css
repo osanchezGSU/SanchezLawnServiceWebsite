@@ -146,13 +146,13 @@ a > img{
         display: flex;
         justify-content: center;
         text-align: center;
-        margin-right: 2vh;
+        
     }
     .home-div > p{
         display: flex;
         justify-content: center;
         text-align: center;
-        margin-right: 2vh;
+        
     }
     .dropdown-menu{
         display: flex;
@@ -168,6 +168,32 @@ a > img{
     }
     .row{
         gap: 30px;
+    }
+    .row-about-us{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+
+    }
+    .row-about-us div h1 {
+        text-align: center;
+    }
+    .row-about-us div p {
+
+    }
+    #image{
+        order: 1;
+        }
+    .row-about-us div img{
+        width: 100%;
+    
+    }
+    .why-us-card{
+        flex-direction: column;
+    }
+    .why-us-card-container{
+        gap: 100px;
     }
 
 }
@@ -415,13 +441,11 @@ a > img{
 }
 .why-us-card{
     display: flex;
-    gap: 100px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    width: 100vh
-   
-  
-    
+    width: 75%;
+
 }
 
 .card-number{
@@ -438,7 +462,6 @@ a > img{
     align-items: center;
 }
 .row-about-us div h1{
-    font-family: "Times New Roman", serif;
     font-weight: 600;
     letter-spacing: 2px;
 }
@@ -451,7 +474,32 @@ a > img{
     font-weight: 600;
 }
 .why-us-content p{
-    font-family: "Times New Roman", serif;
+   
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 5vh;
+    width: 90%;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 10px;
+    
+}
+#quote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.form-floating{
+    width: 100vh;
 }
