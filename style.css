@@ -1,0 +1,457 @@
+body{
+    background-color: #98CF28;
+    padding-top: 100px;
+    padding-bottom: 100px;  
+    font-family: "Lato", sans-serif;
+    
+}
+
+/*Navigation Bar Design*/
+.nav-bar{
+    padding: 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    background-color: #98CF28;
+    z-index: 1;
+    overflow: visible;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    justify-content:  center;
+    align-items: center;
+    gap: 2vh;
+    padding-top: 20px;
+}
+a > img{
+    width: 20vh;
+}
+
+.nav-list-item > a{
+    text-decoration: none;
+    color: white;
+    padding-top: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+     font-style: normal;
+     font-size: 25px;
+     letter-spacing: 1px;
+
+
+     
+}
+.nav-list-item > a:hover{
+    text-decoration: none;
+    color: #CF2845;
+    padding-top: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+   
+    
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+ 
+}
+
+.nav-button{
+    background-color: #CF2845;
+    border-style: none;
+    border-radius: 10px;
+    width: 150px;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: flex; 
+    justify-content: center;
+    padding: 5px;
+    text-decoration: none;
+    
+     
+}
+.nav-button:hover{
+    color: #98CF28;
+}
+
+.nav-button:active {
+    scale: 1.05;
+}
+
+.toggle_btn {
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
+}
+.dropdown-menu{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    list-style: none;
+    gap: 5px;
+    right: 1rem;
+    width: 300px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    display: none;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   
+}
+
+.dropdown-menu > .nav-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+
+}
+
+.dropdown-menu.open{
+    height: 240px;
+    display: none;
+    
+}
+
+
+
+/*Navigation Bar Responsive Design*/
+@media(max-width: 992px){
+    .nav-list, .buttons{
+        display: none;
+    } 
+    .toggle_btn{
+        display:block;
+    }
+    .home-div > h1, .services > h1, .title{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-right: 2vh;
+    }
+    .home-div > p{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-right: 2vh;
+    }
+    .dropdown-menu{
+        display: flex;
+        
+    }
+    .services-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .lawn-maintenance-card::before{
+        background-position: center;
+    }
+    .row{
+        gap: 30px;
+    }
+
+}
+
+.grass-image{
+    width: 100%;
+
+}
+.home-div > h1, .services > h1, .title{
+    color: white;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.home-div > p{
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #D9D9D9;
+    padding-bottom: 10vh;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+.home-div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home{
+    height: 100%;
+    padding-top: 100px;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%;
+
+}
+.services > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+.services-cards{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 70vh;
+    
+    gap:0px; */
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    
+} 
+
+.landscaping-card, .lawn-maintenance-card {
+    position: relative; /* Ensure positioning context for pseudo-elements */
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Landscaping card background image with opacity */
+.landscaping-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/image-landscaping.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: -1; /* Ensure the background is behind the content */
+ /* Adjust opacity value here */
+    
+}
+
+/* Lawn maintenance card background image */
+.lawn-maintenance-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/image-lawncare-mowing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: -1; /* Ensure the background is behind the content */
+    /* Adjust opacity value here */
+    
+}
+
+/* Dark overlay */
+.landscaping-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    z-index: -1; /* Ensure the overlay is between the background and content */
+}
+
+/* Dark overlay */
+.lawn-maintenance-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    z-index: -1; /* Ensure the overlay is between the background and content */
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    gap: 5px
+}
+.card-title{
+    text-align: center;
+    color:white;
+  
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    letter-spacing: 2px;
+}
+.card-p{
+    text-align: center;
+    color:#D9D9D9;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    letter-spacing: 2px;
+    
+    
+}
+
+
+.learn-more-btn{
+    text-decoration: none;
+    background: #CF2845;
+    color: white;
+    border-radius: 5%;
+    padding: 2.5px 5px
+   
+}
+
+.sub-menu{
+    position: absolute;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    box-shadow: 0 20px 45px black;
+    opacity: 0;
+    z-index: -999;
+    transition: all easea 0.5s;
+    margin-top: 0px;
+    overflow:visible;
+
+    
+}
+
+.service-header:hover .sub-menu{
+    z-index: 99;
+    opacity: 1;
+
+}
+
+.sub-menu li{
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.sub-menu li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    color: white;
+}
+.sub-menu li a:hover{
+    color: #CF2845
+}
+
+.row-about-us{
+    display: flex;  
+    padding-left: 5vh;
+    padding-right: 5vh;
+    gap: 50px;
+    
+
+
+}
+.row-about-us div img{
+    width: 500px;
+    min-height: auto;
+
+}
+.about-us-col{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.why-us{
+    display: flex;
+    justify-content: center;
+}
+.why-us-card{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100vh
+   
+  
+    
+}
+
+.card-number{
+    background: -webkit-linear-gradient(white, #0a1647);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+}
+
+.why-us-card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row-about-us div h1{
+    font-family: "Times New Roman", serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.row-about-us div p{
+
+    font-weight: 600;
+    font-size: 18px;
+}
+.why-us-content h2{
+    font-weight: 600;
+}
+.why-us-content p{
+    font-family: "Times New Roman", serif;
+    font-weight: 600;
+    font-size: 20px;
+}
