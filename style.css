@@ -571,6 +571,8 @@ form button:hover, form button:focus, form button:active{
     }
     .dropdown-menu{
         display: flex;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(15px);
         
     }
     .services-cards{
