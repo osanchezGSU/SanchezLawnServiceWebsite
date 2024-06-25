@@ -4,9 +4,7 @@ body{
     font-family: "Lato", sans-serif;
     
 }
-html{
-    background-color: #98CF28;
-}
+
 
 /*Navigation Bar Design*/
 .nav-bar{
@@ -571,8 +569,6 @@ form button:hover, form button:focus, form button:active{
     }
     .dropdown-menu{
         display: flex;
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(15px);
         
     }
     .services-cards{
