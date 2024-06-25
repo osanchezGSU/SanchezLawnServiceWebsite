@@ -1,7 +1,6 @@
 body{
     background-color: #98CF28;
-    padding-top: 100px;
-    padding-bottom: 100px;  
+    padding-top: 100px;  
     font-family: "Lato", sans-serif;
     
 }
@@ -18,7 +17,7 @@ body{
     height: 100px;
     top: 0;
     background-color: #98CF28;
-    z-index: 1;
+    z-index: 99;
     overflow: visible;
 }
 .nav-list{
@@ -134,69 +133,7 @@ a > img{
 
 
 
-/*Navigation Bar Responsive Design*/
-@media(max-width: 992px){
-    .nav-list, .buttons{
-        display: none;
-    } 
-    .toggle_btn{
-        display:block;
-    }
-    .home-div > h1, .services > h1, .title{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        
-    }
-    .home-div > p{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        
-    }
-    .dropdown-menu{
-        display: flex;
-        
-    }
-    .services-cards{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    .lawn-maintenance-card::before{
-        background-position: center;
-    }
-    .row{
-        gap: 30px;
-    }
-    .row-about-us{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-       
 
-    }
-    .row-about-us div h1 {
-        text-align: center;
-    }
-    .row-about-us div p {
-
-    }
-    #image{
-        order: 1;
-        }
-    .row-about-us div img{
-        width: 100%;
-    
-    }
-    .why-us-card{
-        flex-direction: column;
-    }
-    .why-us-card-container{
-        gap: 100px;
-    }
-
-}
 
 .grass-image{
     width: 100%;
@@ -438,13 +375,17 @@ a > img{
 .why-us{
     display: flex;
     justify-content: center;
+    align-items: center;
+   
 }
 .why-us-card{
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    max-width: 900px;
+    padding-left: 2vh;
+    padding-right: 2vh;
 
 }
 
@@ -460,6 +401,7 @@ a > img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 .row-about-us div h1{
     font-weight: 600;
@@ -539,7 +481,7 @@ input{
 }
 
 
-button{
+form button{
     margin-top: 20px;
     border-radius: 10px;
     height: 50px;
@@ -554,8 +496,130 @@ button{
 
 }
 
-button:hover, button:focus, button:active{
+form button:hover, form button:focus, form button:active{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.contact-img{
+    color: white;
+    font-size: 100px;;
+}
+.contact-container{
+
+    padding: 5vh;
+    background-color: rgba(0, 0, 0, 0.4) ;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 10px;
+    justify-content: center;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.contact-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    text-align: center;
+    color: white;
+}
+.contact-card a {
+    font-size: 5vh;
+    color: white;
+}
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.instagram-img{
+    font-size: 5vh;
+}
+.nav-link{
+    color: white;
+}
+/*Navigation Bar Responsive Design*/
+@media(max-width: 992px){
+    .nav-list, .buttons{
+        display: none;
+    } 
+    .toggle_btn{
+        display:block;
+    }
+    .home-div > h1, .services > h1, .title{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        
+    }
+    .home-div > p{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .dropdown-menu{
+        display: flex;
+        
+    }
+    .services-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .lawn-maintenance-card::before{
+        background-position: center;
+    }
+    .row{
+        gap: 30px;
+    }
+    .row-about-us{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+
+    }
+    .row-about-us div h1 {
+        text-align: center;
+    }
+    .row-about-us div p {
+
+    }
+    #image{
+        order: 1;
+        }
+    .row-about-us div img{
+        width: 100%;
+    
+    }
+    .why-us-card{
+        flex-direction: column;
+    }
+    .why-us-card-container{
+        gap: 100px;
+    }
+    .why-us-content h2{
+        text-align: center;
+    }
+    #card-title {
+
+        font-size: 3rem;
+    }
+    .contact-container{
+        flex-direction: column;
+       
+    }
+    .contact-card a{
+        font-size: 3vh;
+    }
+
 }
