@@ -20,6 +20,7 @@
   
 </head>
 <body>
+  <!-- Header Start -->
   <header class = "header" id = "header">
    <div class = "nav-bar">
       
@@ -51,7 +52,9 @@
     
    </div>
   </header>
- 
+ <!-- Header End -->
+
+ <!-- Home Start -->
   <section class = "home" id = "home">
     <div class = "home-div">
       <h1>Sanchez Lawn Service</h1>
@@ -59,7 +62,9 @@
       <img class = "grass-image" src="./images/grass-image.png">
     </div>
   </section>
+  <!-- Home End -->
 
+  <!-- Services Start -->
   <section class = "services" id = "services">
     <h1>Residential & Commercial </br> Services</h1>
     <div class = "services-cards">
@@ -80,14 +85,16 @@
       
     </div>
   </section>
+<!-- Header End -->
 
+<!-- About Start -->
   <section class = "services about-us" id = "about-us">
     <h1 class = "title">About Us</h1>
     <div class = "about-us-col">
       <div class ="row-about-us">
         <div>
           <h1>Our History</h1>
-          <p>Sanchez Lawn Service is a proud family-owned business that began its journey approximately five years ago. Founded on a deep-rooted passion for transforming outdoor spaces, we have steadily grown our reputation for reliability, quality, and personalized care in the community. What started as a small endeavor has flourished into a trusted name in lawn care across South Atlanta. Our dedicated team is committed to providing exceptional service, ensuring each lawn we touch reflects our commitment to excellence and customer satisfaction. As we continue to expand our services and enhance our expertise, Sanchez Lawn Service remains steadfast in our mission.</p>
+          <p>Sanchez Lawn Service is a proud family-owned business that began its journey over seven years ago. Founded on a deep-rooted passion for transforming outdoor spaces, we have steadily grown our reputation for reliability, quality, and personalized care in the community. What started as a small endeavor has flourished into a trusted name in lawn care across South Atlanta. Our dedicated team is committed to providing exceptional service, ensuring each lawn we touch reflects our commitment to excellence and customer satisfaction. As we continue to expand our services and enhance our expertise, Sanchez Lawn Service remains steadfast in our mission.</p>
         </div>
         <div>
           <img src="./images/best-yard.jpg" alt="">
@@ -156,7 +163,9 @@
     </div>
 
   </section>
+  <!-- About End -->
 
+  <!-- Quote Start -->
   <section class = "services" id="quote">
     <h1 class="title">Get a Free Quote</h1>
     <form class = "form" action="https://api.web3forms.com/submit" method="POST">
@@ -186,39 +195,39 @@
       <div>
         <select name = "from" class="form-select form-select-lg mb-3" aria-label="Large select example">
           <option selected>How did you hear about us?</option>
-          <option value="1">Google</option>
-          <option value="2">Bing</option>
-          <option value="3">Instagram</option>
-          <option value="3">Facebook</option>
-          <option value="3">Saw Truck or Crew</option>
-          <option value="3">Friend of Family/Neighbor</option>
+          <option value="Google">Google</option>
+          <option value="Bing">Bing</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Saw Truck or Crew">Saw Truck or Crew</option>
+          <option value="Friend of Family / Neighbor">Friend of Family/Neighbor</option>
         </select>
       </div>
       <div class = "select-all">Select All Requested Services:</div>
       <div class="scroll-box">
         <div class="checkbox-item">
             <label>
-                <input type="checkbox" name="services[]" value="lawn_mowing"> Lawn Maintenance
+                <input type="checkbox" name="services[]" value="lawn_maintenance"> Lawn Maintenance
             </label>
         </div>
         <div class="checkbox-item">
             <label>
-                <input type="checkbox" name="services[]" value="shrub_trimming"> Mulch Installation
+                <input type="checkbox" name="services[]" value="mulch_installation"> Mulch Installation
             </label>
         </div>
         <div class="checkbox-item">
             <label>
-                <input type="checkbox" name="services[]" value="flower_bed_maintenance"> Rock Installation
+                <input type="checkbox" name="services[]" value="rock_installation"> Rock Installation
             </label>
         </div>
         <div class="checkbox-item">
             <label>
-                <input type="checkbox" name="services[]" value="gutter_cleaning"> Pine Straw Installation
+                <input type="checkbox" name="services[]" value="pine_straw_installation"> Pine Straw Installation
             </label>
         </div>
         <div class="checkbox-item">
           <label>
-              <input type="checkbox" name="services[]" value="leaf_cleanups"> Sod Installation
+              <input type="checkbox" name="services[]" value="sod_installation"> Sod Installation
           </label>
       </div>
         <div class="checkbox-item">
@@ -260,7 +269,9 @@
     
   </form>
   </section>
+  <!-- Quote End -->
 
+  <!-- Contact Start -->
   <section class="services contact-us" id = "contact">
     <h1 class="title">Get In Touch</h1>
     <div class="contact-container">
@@ -268,11 +279,11 @@
         <i class="fa-solid fa-phone contact-img"></i>
         <div>
           <h1 class="name">Enrique Sanchez</h1>
-          <a href="tel:4044514368" class="number">(404)451-4368</a>
+          <a href="tel:4044514368" class="number">(404) 451-4368</a>
         </div>
         <div>
           <h1 class="name">Luis Sanchez</h1>
-          <a href="tel:4704457740" class="number">(470)445-7740</a>
+          <a href="tel:4704457740" class="number">(470) 445-7740</a>
         </div>
       </div>
       <div class="contact-card">
@@ -288,13 +299,17 @@
       </div>
     </div>
   </section>
+  <!-- Contact End -->
 
+  <!-- Testimonial Start -->
   <section class = "services">
     <h1 class="title">Customer Testimonials</h1>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <div class="elfsight-app-c62376ed-1834-4b29-84ae-8a9d348a56d9" data-elfsight-app-lazy></div>
   </section>
+  <!-- Testemonials End -->
 
+  <!-- Footer Start -->
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <a class="col-md-4 mb-0 text-body-secondary instagram-img" href = "https://www.instagram.com/sanchezlawnservice/"><i class="fa-brands fa-instagram"></i></a>
@@ -312,6 +327,7 @@
       </ul>
     </footer>
   </div>
+  <!-- Footer End -->
  
 <script>
   const toggleBtn = document.querySelector('.toggle_btn')
@@ -325,9 +341,7 @@
     toggleButtonIcn.classList = isOpen
     ? 'fa-solid fa-bars' : 'fa-solid fa-xmark'
   }
-  // Alternatively, you can target your input element by ID
-  // Replace querySelector('input[name="search_input"]') with getElementById('search_input') 
-    // and insert id="search_input" in your form's input field
+
  
 </script>
 </body>
