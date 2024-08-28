@@ -8,7 +8,7 @@ body{
 
 /*Navigation Bar Design*/
 .nav-bar{
-    padding: 2vh;
+    padding: 2vh 2vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,17 +20,29 @@ body{
     background-color: #98CF28;
     z-index: 99;
     overflow: visible;
+    transition: .2s box-shadow ease-in-out;
+
+}
+.bottom-border{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 .nav-list{
     display: flex;
     list-style: none;
-    justify-content:  center;
     align-items: center;
-    gap: 2vh;
-    padding-top: 20px;
+    gap: 5vh;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
 a > img{
     width: 20vh;
+}
+.nav-list-item{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .nav-list-item > a{
@@ -42,8 +54,10 @@ a > img{
      font-style: normal;
      font-size: 25px;
      letter-spacing: 1px;
-
-
+    transition: .3s color ease-in-out;
+    height: 100%;
+    align-items: center;
+    display: flex;
      
 }
 .nav-list-item > a:hover{
@@ -51,12 +65,7 @@ a > img{
     color: #CF2845;
     padding-top: 0;
     font-family: "Lato", sans-serif;
-    font-weight: 400;
     font-style: normal;
-    font-size: 25px;
-   
-    
-
 }
 
 .buttons {
@@ -64,6 +73,7 @@ a > img{
     justify-content: center;
     align-items: center;
     gap: 10px;
+  
  
 }
 
@@ -82,6 +92,9 @@ a > img{
     justify-content: center;
     padding: 5px;
     text-decoration: none;
+    box-shadow: inset 0px 2px hsl(350, 68%, 60%),
+    0 2px 2px rgb(0, 0, 0, .4);
+    transition: .2s color ease-in-out;
     
      
 }
@@ -132,12 +145,13 @@ a > img{
     
 }
 
-
-
-
-
+/* Landing Page CSS*/
 .grass-image{
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    filter: drop-shadow(20px 0px 3px);
 
 }
 .home-div > h1, .services > h1, .title{
@@ -164,7 +178,6 @@ a > img{
     font-weight: 400;
     font-size: 2rem;
     color: #D9D9D9;
-    padding-bottom: 10vh;
     letter-spacing: 1px;
     display: flex;
     justify-content: center;
@@ -173,14 +186,17 @@ a > img{
 
 }
 .home-div{
-    height: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .home{
-    height: 100%;
-    padding-top: 100px;
+    height: calc(100vh - 100px);
+    position: relative;
 }
 
 .services{
@@ -318,40 +334,49 @@ a > img{
 
 .sub-menu{
     position: absolute;
-    width: 250px;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    box-shadow: 0 20px 45px black;
     opacity: 0;
-    z-index: -999;
-    transition: all easea 0.5s;
-    margin-top: 0px;
-    overflow:visible;
+    transition: 1s transform ease-in-out, 1s opacity ease-in-out, 1s visibility ease-in-out;
+    transform: translateX(-50px);
+    top: 100%;
+    visibility: hidden;
+    display: flex;
+    background-color: hsl(0, 0%, 0%, .75);
+    list-style-type: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5PX);
+    box-shadow: inset 0 1px hsl(0, 0%, 0%, .75), 1px 5px 5px hsl(0, 0%, 0%, .75);
 
-    
 }
 
 .service-header:hover .sub-menu{
-    z-index: 99;
+    visibility: visible;
+    transform: translateX(0px);
     opacity: 1;
-
+  
 }
 
 .sub-menu li{
     margin: 0;
     width: 100%;
-    list-style: none;
-    margin-bottom: 20px;
 }
 .sub-menu li a {
     text-decoration: none;
-    display: inline-block;
     width: 100%;
     color: white;
+    font-size: 18px;
+    letter-spacing: .15rem;
+    transition: .2s color ease-in-out, .3s padding ease-in-out ;
 }
 .sub-menu li a:hover{
-    color: #CF2845
+    color: #CF2845;
+    padding-left: 5px;
+ 
+}
+.sub-menu li a:hover .sub-menu li{
+    background-color: black;
 }
 
 .row-about-us{
