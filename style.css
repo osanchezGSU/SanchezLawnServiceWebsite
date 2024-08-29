@@ -1,3 +1,23 @@
+html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
 body{
     background-color: #98CF28;
     padding-top: 100px;  
@@ -74,7 +94,6 @@ a > img{
     align-items: center;
     gap: 10px;
   
- 
 }
 
 .nav-button{
@@ -145,6 +164,53 @@ a > img{
     
 }
 
+.sub-menu{
+    position: absolute;
+    opacity: 0;
+    transition: 1s transform ease-in-out, 1s opacity ease-in-out, 1s visibility ease-in-out;
+    transform: translateX(-50px);
+    top: 100%;
+    visibility: hidden;
+    display: flex;
+    background-color: hsl(0, 0%, 0%, .75);
+    list-style-type: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5PX);
+    box-shadow: inset 0 1px hsl(0, 0%, 0%, .75), 1px 5px 5px hsl(0, 0%, 0%, .75);
+
+}
+
+.service-header:hover .sub-menu{
+    visibility: visible;
+    transform: translateX(0px);
+    opacity: 1;
+  
+}
+
+.sub-menu li{
+    margin: 0;
+    width: 100%;
+}
+.sub-menu li a {
+    text-decoration: none;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    letter-spacing: .15rem;
+    transition: .2s color ease-in-out, .3s padding ease-in-out ;
+}
+.sub-menu li a:hover{
+    color: #CF2845;
+    padding-left: 5px;
+ 
+}
+.sub-menu li a:hover .sub-menu li{
+    background-color: black;
+}
+
 /* Landing Page CSS*/
 .grass-image{
     width: 100%;
@@ -199,31 +265,28 @@ a > img{
     position: relative;
 }
 
+/* Services Section CSS */
+
 .services{
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    height: 100%;
+    height: 100vh;
+    padding-top: 105px;
 
 }
 .services > h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10vh;
     padding-bottom: 5vh;
     text-align: center;
+ 
 }
 .services-cards{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 70vh;
-    
-    gap:0px; */
     display: flex;
     height: 70vh;
     width: 100%;
-    
 } 
 
 .landscaping-card, .lawn-maintenance-card {
@@ -232,62 +295,30 @@ a > img{
     height: 100%;
     overflow: hidden; /* Prevent overflow issues */
 }
-
-/* Landscaping card background image with opacity */
-.landscaping-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./images/image-landscaping.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; 
-    z-index: -1; /* Ensure the background is behind the content */
- /* Adjust opacity value here */
-    
+.landscaping-card{
+    background-image: url(./images/image-landscaping.jpg);
+    background-repeat: none;
+    object-fit: cover;
+    background-size: cover;
+}
+.lawn-maintenance-card{
+    background-image: url(./images/image-lawncare-mowing.jpg);
+    background-repeat: none;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Lawn maintenance card background image */
-.lawn-maintenance-card::before {
-    content: '';
+.card-overlay{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    background-image: url("./images/image-lawncare-mowing.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; 
-    z-index: -1; /* Ensure the background is behind the content */
-    /* Adjust opacity value here */
-    
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl(0, 0%, 0%, 0.5);
+    z-index: 1;
 }
 
-/* Dark overlay */
-.landscaping-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
-    z-index: -1; /* Ensure the overlay is between the background and content */
-}
-
-/* Dark overlay */
-.lawn-maintenance-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
-    z-index: -1; /* Ensure the overlay is between the background and content */
-}
 
 .card-content{
     display: flex;
@@ -296,7 +327,11 @@ a > img{
     align-items: center;
     height: 100%;
     color: white;
-    gap: 5px
+    gap: 5px;
+    transition: .2s opactiy ease-in-out;
+}
+.card-content *{
+    z-index: 2;
 }
 .card-title{
     text-align: center;
@@ -308,6 +343,7 @@ a > img{
     margin-bottom: 0px;
     padding-bottom: 0px;
     letter-spacing: 2px;
+
 }
 .card-p{
     text-align: center;
@@ -325,68 +361,30 @@ a > img{
 
 .learn-more-btn{
     text-decoration: none;
-    background: #CF2845;
     color: white;
     border-radius: 5%;
-    padding: 2.5px 5px
-   
+    padding: 5px 5px;
+    background-color: #CF2845;
+    letter-spacing: 1px;
+    font-weight: 600;
+    box-shadow: inset 0px 1.5px hsl(350, 68%, 60%),
+    0 5px 4px rgb(0, 0, 0);
+    transition: .2s transform ease-in-out, .2s box-shadow ease-in-out;
+    margin-top: 10px;
+}   
+.learn-more-btn:hover{
+    transform: scale(1.1);
+    box-shadow:none;
 }
 
-.sub-menu{
-    position: absolute;
-    opacity: 0;
-    transition: 1s transform ease-in-out, 1s opacity ease-in-out, 1s visibility ease-in-out;
-    transform: translateX(-50px);
-    top: 100%;
-    visibility: hidden;
-    display: flex;
-    background-color: hsl(0, 0%, 0%, .75);
-    list-style-type: none;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    backdrop-filter: blur(5PX);
-    box-shadow: inset 0 1px hsl(0, 0%, 0%, .75), 1px 5px 5px hsl(0, 0%, 0%, .75);
+/* About Us Section CSS */
 
-}
-
-.service-header:hover .sub-menu{
-    visibility: visible;
-    transform: translateX(0px);
-    opacity: 1;
-  
-}
-
-.sub-menu li{
-    margin: 0;
-    width: 100%;
-}
-.sub-menu li a {
-    text-decoration: none;
-    width: 100%;
-    color: white;
-    font-size: 18px;
-    letter-spacing: .15rem;
-    transition: .2s color ease-in-out, .3s padding ease-in-out ;
-}
-.sub-menu li a:hover{
-    color: #CF2845;
-    padding-left: 5px;
- 
-}
-.sub-menu li a:hover .sub-menu li{
-    background-color: black;
-}
 
 .row-about-us{
     display: flex;  
     padding-left: 5vh;
     padding-right: 5vh;
     gap: 50px;
-    
-
-
 }
 .row-about-us div img{
     width: 500px;
@@ -446,6 +444,8 @@ a > img{
     font-weight: 600;
     font-size: 18px;
 }
+
+
 .form{
     display: flex;
     flex-direction: column;
