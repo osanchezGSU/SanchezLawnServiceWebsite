@@ -21,6 +21,7 @@ gsap.ticker.add((time)=>{
 gsap.ticker.lagSmoothing(0)
 
 const cards = document.querySelectorAll('.service-card');
+let serviceCardContainer = document.querySelector(".services-cards");
 
 cards.forEach(card => {
     const cardOveraly = card.querySelector('.card-overlay');
@@ -28,11 +29,11 @@ cards.forEach(card => {
 
     let tl = gsap.timeline({
         scrollTrigger: {
-            trigger: card,
-            start: '25% 75%',
-            end: '50% 70%',
+            trigger: serviceCardContainer,
+            start: '50% 80%',
+            end: '60% 75%',
             scrub: true,
-            markers: false
+            markers: true
         }
     })
     
