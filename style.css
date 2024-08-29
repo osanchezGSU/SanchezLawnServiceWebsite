@@ -316,7 +316,7 @@ a > img{
     left: 0;
     top: 0;
     background-color: hsl(0, 0%, 0%, 0.5);
-    z-index: 1;
+    z-index: 0;
 }
 
 
@@ -329,6 +329,7 @@ a > img{
     color: white;
     gap: 5px;
     transition: .2s opactiy ease-in-out;
+    z-index: 2;
 }
 .card-content *{
     z-index: 2;
@@ -379,7 +380,10 @@ a > img{
 
 /* About Us Section CSS */
 
-
+.about-us{
+    min-height: 100vh;
+    padding-top: 105px;
+}
 .row-about-us{
     display: flex;  
     padding-left: 5vh;

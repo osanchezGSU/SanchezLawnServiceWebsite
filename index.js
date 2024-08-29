@@ -32,7 +32,7 @@ cards.forEach(card => {
             start: '25% 75%',
             end: '50% 70%',
             scrub: true,
-            markers: true
+            markers: false
         }
     })
     
@@ -44,12 +44,14 @@ cards.forEach(card => {
     },
     '<' );
     tl.fromTo(cardContent, {
-        opacity: 0
+        opacity: 0,
+        yPercent: 100
     },
     {
-        opacity: 1
+        opacity: 1,
+        yPercent: 0
     },
-    '<' );
+    '>' );
 
 })
 
