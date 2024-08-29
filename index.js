@@ -30,10 +30,10 @@ cards.forEach(card => {
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: serviceCardContainer,
-            start: '50% 80%',
+            start: '25% 70%',
             end: '60% 75%',
             scrub: true,
-            markers: true
+            markers: false
         }
     })
     
