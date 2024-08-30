@@ -20,6 +20,9 @@ gsap.ticker.add((time)=>{
 
 gsap.ticker.lagSmoothing(0)
 
+
+
+/* Service Section Animation on Scroll*/
 const cards = document.querySelectorAll('.service-card');
 let serviceCardContainer = document.querySelector(".services-cards");
 
@@ -38,22 +41,51 @@ cards.forEach(card => {
     })
     
     tl.fromTo(cardOveraly, {
-        opacity: 0
+        opacity: 0,
+
     },
     {
-        opacity: 1
+        opacity: 1,
+        ease: "power2.out"
+      
     },
     '<' );
     tl.fromTo(cardContent, {
         opacity: 0,
-        yPercent: 100
+        yPercent: 100,
+
+        
     },
     {
         opacity: 1,
-        yPercent: 0
+        yPercent: 0,
+        ease: "power2.out"
+        
     },
     '>' );
 
+})
+
+
+/* Landing Page Animation on Scroll */
+let landingPageContainer = document.querySelector('.home');
+const grassImage = landingPageContainer.querySelector('.grass-image');
+let landingPageTL = gsap.timeline({
+    scrollTrigger: {
+        trigger: landingPageContainer,
+        start: 'start 10%',
+        end: '65% 40%',
+        scrub: true,
+        markers: true
+    }
+});
+
+landingPageTL.fromTo(grassImage, {
+    filter: ('drop-shadow(0 0 0)')
+},
+{
+    filter: (' drop-shadow(5px -20px 2px)'),
+    ease: 'power2.out'
 })
 
 

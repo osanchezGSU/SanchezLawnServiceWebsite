@@ -218,6 +218,7 @@ a > img{
     bottom: 0;
     height: 50%;
     filter: drop-shadow(20px 0px 3px);
+    transition: .3s filter ease-in-out;
 
 }
 .home-div > h1, .services > h1, .title{
@@ -328,7 +329,7 @@ a > img{
     height: 100%;
     color: white;
     gap: 5px;
-    transition: .2s opactiy ease-in-out;
+    transition: .5s opactiy ease-in-out, .2s transform ease-in-out ;
     z-index: 2;
 }
 .card-content *{
