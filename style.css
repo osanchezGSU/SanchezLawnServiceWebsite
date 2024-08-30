@@ -22,6 +22,7 @@ body{
     background-color: #98CF28;
     padding-top: 100px;  
     font-family: "Lato", sans-serif;
+
     
 }
 
@@ -41,6 +42,7 @@ body{
     z-index: 99;
     overflow: visible;
     transition: .2s box-shadow ease-in-out;
+
 
 }
 .bottom-border{
@@ -318,6 +320,7 @@ a > img{
     top: 0;
     background-color: hsl(0, 0%, 0%, 0.5);
     z-index: 0;
+    transition: .5s opacity ease-in-out
 }
 
 

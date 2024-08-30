@@ -77,7 +77,7 @@ let landingPageTL = gsap.timeline({
         start: 'start 10%',
         end: '65% 40%',
         scrub: true,
-        markers: true
+        markers: false
     }
 });
 
