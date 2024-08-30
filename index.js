@@ -82,10 +82,10 @@ let landingPageTL = gsap.timeline({
 });
 
 landingPageTL.fromTo(grassImage, {
-    filter: ('drop-shadow(5px -20px 2px)')
+    filter: ('drop-shadow(5px -25px 2px)')
 },
 {
-    filter: ('drop-shadow(2px -10px 2px)'),
+    filter: ('drop-shadow(1px -5px 2px)'),
     ease: 'power2.out'
 })
 

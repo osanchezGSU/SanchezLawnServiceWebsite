@@ -221,6 +221,7 @@ a > img{
     height: 50%;
     filter: drop-shadow(20px 0px 3px);
     transition: .3s filter ease-in-out;
+    object-fit: cover;
 
 }
 .home-div > h1, .services > h1, .title{
