@@ -57,9 +57,10 @@ cards.forEach(card => {
         
     },
     {
-        opacity: 1,
         yPercent: 0,
-        ease: "power2.out"
+        opacity: 1,
+        ease: "power4.out",
+        duration: 5
         
     },
     '>' );
@@ -81,10 +82,10 @@ let landingPageTL = gsap.timeline({
 });
 
 landingPageTL.fromTo(grassImage, {
-    filter: ('drop-shadow(0 0 0)')
+    filter: ('drop-shadow(5px -20px 2px)')
 },
 {
-    filter: (' drop-shadow(5px -20px 2px)'),
+    filter: ('drop-shadow(2px -10px 2px)'),
     ease: 'power2.out'
 })
 
