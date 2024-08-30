@@ -264,8 +264,9 @@ a > img{
 }
 
 .home{
-    height: calc(100vh - 100px);
+    height: 100vh;
     position: relative;
+    margin-top: -100px;
 }
 
 /* Services Section CSS */
